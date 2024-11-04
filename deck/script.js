@@ -40,7 +40,7 @@ function refreshButtons(params) {
             button = document.createElement("button")
             button.innerHTML = action
             button.onclick = () => {
-                fetch("http://${config.Castmate.Address}:${config.Castmate.Port}/plugins/remote/buttons/press?button=" + action, {
+                fetch(`http://${config.Castmate.Address}:${config.Castmate.Port}/plugins/remote/buttons/press?button=${action}`, {
                     "headers": {
                         "Access-Control-Allow-Origin": "*"
                     },
