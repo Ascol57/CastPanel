@@ -6,6 +6,8 @@ document.querySelector('form').addEventListener('submit', (e) => {
     for (const [key, value] of formData.entries()) {
         if (key.startsWith('obs-')) {
             config.OBS[key.split('-')[1]] = value;
+        } else if (key.startsWith('castmate-')) {
+            config.Castmate[key.split('-')[1]] = value;
         } else {
             config[key] = value;
         }

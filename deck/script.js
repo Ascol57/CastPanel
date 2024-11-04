@@ -28,7 +28,7 @@ obs.connect(`ws://${config.OBS.Address}:${config.OBS.Port}`, config.OBS.Password
 });
 
 function refreshButtons(params) {
-    fetch("http://localhost:8181/plugins/remote/buttons", {
+    fetch(`http://${config.Castmate.Address}:${config.Castmate.Port}/plugins/remote/buttons`, {
         "headers": {
             "Access-Control-Allow-Origin": "*"
         },
@@ -40,7 +40,7 @@ function refreshButtons(params) {
             button = document.createElement("button")
             button.innerHTML = action
             button.onclick = () => {
-                fetch("http://localhost:8181/plugins/remote/buttons/press?button=" + action, {
+                fetch("http://${config.Castmate.Address}:${config.Castmate.Port}/plugins/remote/buttons/press?button=" + action, {
                     "headers": {
                         "Access-Control-Allow-Origin": "*"
                     },

@@ -18,6 +18,10 @@ if (fs.existsSync(configFilePath)) {
       "Address": "127.0.0.1",
       "Port": 4455,
       "Password": null
+    },
+    "Castmate": {
+      "Address": "127.0.0.1",
+      "Port": 8181
     }
   }
   fs.writeFileSync(configFilePath, JSON.stringify(config, null, 2));
