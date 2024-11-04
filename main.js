@@ -146,7 +146,7 @@ function createWindow() {
   }
 
   // Open the DevTools.
-  view4.webContents.openDevTools()
+  //view4.webContents.openDevTools()
 
   reload()
 
