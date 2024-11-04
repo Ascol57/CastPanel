@@ -22,3 +22,4 @@ Note: If you're using Linux Bash for Windows, [see this guide](https://www.howto
 
 ## License
 
+[AGPL-3.0](LICENSE.md)
