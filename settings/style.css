@@ -1,0 +1,21 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #19171c;
+    color: #efeff1;
+}
+
+.top-bar {
+    -webkit-app-region: drag;
+    height: 31px;
+    border-bottom: black 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 10px;
+}
+
+form {
+    margin: 10px;
+}

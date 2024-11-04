@@ -1,0 +1,59 @@
+/* styles.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 10px;
+  padding: 0;
+  background-color: #19171c;
+  color: #efeff1;
+}
+
+.line {
+    display: flex;
+    gap: 10px;
+    -webkit-app-region: drag;
+}
+
+.recording {
+    -webkit-app-region: no-drag;
+    cursor: pointer;
+    color: #ff0000;
+}
+
+.recording::before {
+    content: "🔴";
+}
+
+.recording.active {
+    color: #00ff00;
+}
+
+.recording.active::before {
+    content: "🟢";
+}
+
+.streaming {
+    -webkit-app-region: no-drag;
+    cursor: pointer;
+    color: #ff0000;
+}
+
+.streaming::before {
+    content: "🔴";
+}
+
+.streaming.active {
+    color: #00ff00;
+}
+
+.streaming.active::before {
+    content: "🟢";
+}
+
+.settings {
+    -webkit-app-region: no-drag;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+/* Add styles here to customize the appearance of your app */

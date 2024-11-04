@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../node_modules\obs-websocket-js\dist\obs-ws.global.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="scenes">
+
+    </div>
+    <div class="actions off">
+
+    </div>
+
+    <div class="bar">
+        <button
+            onclick="document.querySelector('.scenes').classList.remove('off');document.querySelector('.actions').classList.add('off');">Scenes</button>
+        <button
+            onclick="document.querySelector('.scenes').classList.add('off');document.querySelector('.actions').classList.remove('off');">Actions</button>
+
+        <button class="shareButton">Share</button>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

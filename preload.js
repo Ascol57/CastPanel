@@ -6,13 +6,18 @@
  *
  * https://www.electronjs.org/docs/latest/tutorial/sandbox
  */
-window.addEventListener('DOMContentLoaded', () => {
-  const replaceText = (selector, text) => {
-    const element = document.getElementById(selector)
-    if (element) element.innerText = text
-  }
 
-  for (const type of ['chrome', 'node', 'electron']) {
-    replaceText(`${type}-version`, process.versions[type])
-  }
+const { contextBridge } = require('electron')
+const fs = require('fs');
+const { get } = require('http');
+
+contextBridge.exposeInMainWorld('API', {
+    saveSettings: (config) => {
+        fs.writeFileSync('config.json', JSON.stringify(config, null, 2));
+    },
+    getSettings: () => {
+        return JSON.parse(fs.readFileSync('config.json', 'utf-8'));
+    }
 })
+
+console.log("preload.js loaded")

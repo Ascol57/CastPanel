@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-bar">Settings</div>
+    
+    <form>
+        <label for="obs-Address">OBS IP:</label>
+        <input type="text" id="obs-Address" name="obs-Address"><br><br>
+        <label for="obs-Port">OBS Port:</label>
+        <input type="text" id="obs-Port" name="obs-Port"><br><br>
+        <label for="obs-Password">OBS Password:</label>
+        <input type="text" id="obs-Password" name="obs-Password"><br><br>
+
+        <label for="NetInterface">NetInterface:</label>
+        <select name="NetInterface" id="NetInterface">
+            <option value="Wi-Fi">Wi-Fi</option>
+            <option value="Ethernet">Ethernet</option>
+        </select>
+        <br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+<script src="script.js"></script>
+</html>

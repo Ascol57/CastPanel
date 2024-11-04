@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #19171c;
+}
+
+video {
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+}
