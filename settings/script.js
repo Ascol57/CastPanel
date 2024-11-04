@@ -19,3 +19,5 @@ document.querySelector('form #obs-Address').value = config.OBS.Address;
 document.querySelector('form #obs-Port').value = config.OBS.Port;
 document.querySelector('form #obs-Password').value = config.OBS.Password;
 document.querySelector('form #NetInterface').value = config.NetInterface;
+document.querySelector('form #castmate-Address').value = config.Castmate.Address;
+document.querySelector('form #castmate-Port').value = config.Castmate.Port;
