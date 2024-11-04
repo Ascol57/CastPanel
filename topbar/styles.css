@@ -12,6 +12,7 @@ body {
     display: flex;
     gap: 10px;
     -webkit-app-region: drag;
+    align-items: center;
 }
 
 .recording {

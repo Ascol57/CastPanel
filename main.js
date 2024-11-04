@@ -142,7 +142,7 @@ function createWindow() {
   }
 
   // Open the DevTools.
-  view1.webContents.openDevTools()
+  //view1.webContents.openDevTools()
 
   reload()
 
