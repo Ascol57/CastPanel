@@ -69,3 +69,22 @@ document.querySelector('.settings').addEventListener('click', () => {
 });
 
 console.log("renderer.js loaded")
+
+async function get_stream() {
+    headers = {
+        'Authorization': 'Bearer ' + "vx8llwgl7flp1fmta6nam6hjupo7xp",
+        'Client-Id': "gp762nuuoqcoxypju8c569th9wz7q5",
+    }
+    res = await (await fetch('https://api.twitch.tv/helix/streams?user_login='+config.Twitch.Channel, {
+        method: "GET", // *GET, POST, PUT, DELETE, etc.
+        headers: headers,
+    })).json();
+    return res;
+}
+
+const viewerCounter = document.querySelector('.viewer-counter');
+
+setInterval(async () => {
+    stream_data = await get_stream();
+    viewerCounter.innerText = stream_data.data[0].viewer_count;
+}, 500);

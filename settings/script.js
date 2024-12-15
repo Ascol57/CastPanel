@@ -8,6 +8,8 @@ document.querySelector('form').addEventListener('submit', (e) => {
             config.OBS[key.split('-')[1]] = value;
         } else if (key.startsWith('castmate-')) {
             config.Castmate[key.split('-')[1]] = value;
+        } else if (key.startsWith('twitch-')) {
+            config.Twitch[key.split('-')[1]] = value;
         } else {
             config[key] = value;
         }
@@ -21,3 +23,4 @@ document.querySelector('form #obs-Password').value = config.OBS.Password;
 document.querySelector('form #NetInterface').value = config.NetInterface;
 document.querySelector('form #castmate-Address').value = config.Castmate.Address;
 document.querySelector('form #castmate-Port').value = config.Castmate.Port;
+document.querySelector('form #twitch-Channel').value = config.Twitch.Channel;

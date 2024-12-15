@@ -22,7 +22,10 @@ if (fs.existsSync(configFilePath)) {
     "Castmate": {
       "Address": "127.0.0.1",
       "Port": 8181
-    }
+    },
+    "Twitch": {
+      "Channel": ""
+    },
   }
   fs.writeFileSync(configFilePath, JSON.stringify(config, null, 2));
 }
@@ -139,14 +142,14 @@ function createWindow() {
 
   reload = () => {
     view1.webContents.loadFile('topbar/index.html')
-    view2.webContents.loadURL('https://dashboard.twitch.tv/u/moonligopsone/stream-manager')
+    view2.webContents.loadURL('https://dashboard.twitch.tv/u/'+config.Twitch.Channel+'/stream-manager')
     //view3.webContents.loadURL('https://player.twitch.tv/?channel=moonligopsone&enableExtensions=true&muted=true&parent=twitch.tv&player=popout&quality=auto&volume=0.5')
     view3.webContents.loadFile("camera/index.html")
     view4.webContents.loadFile("deck/index.html")
   }
 
   // Open the DevTools.
-  //view4.webContents.openDevTools()
+  //view1.webContents.openDevTools()
 
   reload()
 
